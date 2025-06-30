@@ -4,6 +4,16 @@ import { Github, Linkedin, Mail, Download, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
+  const handleDownloadResume = () => {
+    // Create a link to the uploaded resume
+    const link = document.createElement('a');
+    link.href = '/lovable-uploads/3a0eb04f-5e4d-4b0d-8b1f-33743320761a.png';
+    link.download = 'Vishal_S_Resume.png';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 px-4">
       <div className="max-w-4xl mx-auto text-center">
@@ -29,23 +39,26 @@ const Hero = () => {
         </div>
         
         <div className="flex flex-wrap justify-center gap-4 mb-8">
-          <Button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 py-3 rounded-full transition-all duration-300 hover:scale-105">
+          <Button 
+            onClick={handleDownloadResume}
+            className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 py-3 rounded-full transition-all duration-300 hover:scale-105"
+          >
             <Download size={20} className="mr-2" />
             Download Resume
           </Button>
           <Button variant="outline" className="px-6 py-3 rounded-full border-2 border-gray-300 hover:border-blue-500 transition-all duration-300 hover:scale-105">
-            View Projects
+            <a href="#projects">View Projects</a>
           </Button>
         </div>
         
         <div className="flex justify-center gap-6">
-          <a href="#" className="p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+          <a href="https://github.com/Vishal8376" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
             <Github size={24} className="text-gray-700" />
           </a>
-          <a href="#" className="p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+          <a href="https://linkedin.com/in/vishal-s" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
             <Linkedin size={24} className="text-blue-600" />
           </a>
-          <a href="#" className="p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+          <a href="mailto:vishal20063012@gmail.com" className="p-3 rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
             <Mail size={24} className="text-red-500" />
           </a>
         </div>

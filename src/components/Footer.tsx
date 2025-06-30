@@ -15,13 +15,13 @@ const Footer = () => {
           </div>
           
           <div className="flex justify-center gap-6 mb-8">
-            <a href="#" className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-all duration-300 hover:scale-110">
+            <a href="https://github.com/Vishal8376" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-all duration-300 hover:scale-110">
               <Github size={24} />
             </a>
-            <a href="#" className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-all duration-300 hover:scale-110">
+            <a href="https://linkedin.com/in/vishal-s" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-all duration-300 hover:scale-110">
               <Linkedin size={24} />
             </a>
-            <a href="#" className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-all duration-300 hover:scale-110">
+            <a href="mailto:vishal20063012@gmail.com" className="p-3 rounded-full bg-gray-800 hover:bg-gray-700 transition-all duration-300 hover:scale-110">
               <Mail size={24} />
             </a>
           </div>
