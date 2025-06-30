@@ -11,12 +11,12 @@ const Hero = () => {
           <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
             <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
               <span className="text-4xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-                VP
+                VS
               </span>
             </div>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-4">
-            Vishal Prajapati
+            Vishal S
           </h1>
           <div className="flex items-center justify-center gap-2 text-gray-600 mb-6">
             <MapPin size={20} />

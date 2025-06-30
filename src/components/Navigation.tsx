@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -29,7 +28,7 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-            VP
+            VS
           </div>
           
           {/* Desktop Navigation */}

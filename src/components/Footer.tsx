@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center">
           <div className="mb-8">
-            <h3 className="text-2xl font-bold mb-4">Vishal Prajapati</h3>
+            <h3 className="text-2xl font-bold mb-4">Vishal S</h3>
             <p className="text-gray-400 max-w-md mx-auto">
               Building the web, one line of code at a time.
             </p>
@@ -28,7 +28,7 @@ const Footer = () => {
           
           <div className="border-t border-gray-800 pt-8">
             <p className="text-gray-400 flex items-center justify-center gap-2">
-              Made with <Heart size={16} className="text-red-500" fill="currentColor" /> by Vishal Prajapati
+              Made with <Heart size={16} className="text-red-500" fill="currentColor" /> by Vishal S
             </p>
             <p className="text-gray-500 text-sm mt-2">
               © 2024 All rights reserved.
