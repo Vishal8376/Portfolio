@@ -6,40 +6,40 @@ import { Button } from '@/components/ui/button';
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.",
+      title: "Github Profile Assignment",
+      description: "A comprehensive portfolio website showcasing my skills, projects, and professional experience with modern web technologies and responsive design.",
       image: "photo-1498050108023-c5249f4df085",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "#",
+      technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+      github: "https://github.com/Vishal8376/Github-Profile-Assignment",
       live: "#",
       date: "2024"
     },
     {
-      title: "Task Management App",
-      description: "Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "photo-1487058792275-0ad4aaf24ca7",
-      technologies: ["Next.js", "TypeScript", "Socket.io", "PostgreSQL"],
-      github: "#",
+      title: "Expense Tracker",
+      description: "A comprehensive expense tracking application to manage personal finances with intuitive UI and data visualization features.",
+      image: "photo-1554224155-6726b3ff858f",
+      technologies: ["React", "JavaScript", "CSS", "Local Storage"],
+      github: "https://github.com/Vishal8376/Expense-Tracker",
       live: "#",
       date: "2024"
     },
     {
-      title: "Weather Dashboard",
-      description: "Interactive weather dashboard with location-based forecasts, historical data visualization, and responsive design.",
-      image: "photo-1461749280684-dccba630e2f6",
-      technologies: ["React", "Chart.js", "Weather API", "Tailwind"],
-      github: "#",
+      title: "Music Player App",
+      description: "A feature-rich music player application with playlist management, audio controls, and modern user interface design.",
+      image: "photo-1493225457124-a3eb161ffa5f",
+      technologies: ["HTML", "CSS", "JavaScript", "Web Audio API"],
+      github: "https://github.com/Vishal8376/Music-Player-App",
       live: "#",
-      date: "2023"
+      date: "2024"
     },
     {
-      title: "Portfolio Website",
-      description: "Responsive portfolio website showcasing projects and skills with modern design and smooth animations.",
-      image: "photo-1486312338219-ce68d2c6f44d",
-      technologies: ["React", "Tailwind CSS", "Framer Motion"],
-      github: "#",
+      title: "Todo List Application",
+      description: "A dynamic todo list application with CRUD operations, task management, and local storage persistence for better productivity.",
+      image: "photo-1484480974693-6ca0a78fb36b",
+      technologies: ["HTML", "CSS", "JavaScript", "DOM Manipulation"],
+      github: "https://github.com/Vishal8376/Todo-List",
       live: "#",
-      date: "2023"
+      date: "2024"
     }
   ];
 
@@ -67,7 +67,7 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="flex gap-4">
-                    <a href={project.github} className="p-2 bg-white rounded-full hover:bg-gray-100 transition-colors">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-2 bg-white rounded-full hover:bg-gray-100 transition-colors">
                       <Github size={20} className="text-gray-700" />
                     </a>
                     <a href={project.live} className="p-2 bg-white rounded-full hover:bg-gray-100 transition-colors">
@@ -97,13 +97,17 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-3">
-                  <Button variant="outline" size="sm" className="flex-1">
-                    <Github size={16} className="mr-2" />
-                    Code
+                  <Button variant="outline" size="sm" className="flex-1" asChild>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      <Github size={16} className="mr-2" />
+                      Code
+                    </a>
                   </Button>
-                  <Button size="sm" className="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700">
-                    <ExternalLink size={16} className="mr-2" />
-                    Live Demo
+                  <Button size="sm" className="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700" asChild>
+                    <a href={project.live}>
+                      <ExternalLink size={16} className="mr-2" />
+                      Live Demo
+                    </a>
                   </Button>
                 </div>
               </div>
