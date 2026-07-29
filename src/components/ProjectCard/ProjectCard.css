@@ -1,0 +1,203 @@
+.project-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+}
+
+.project-banner{
+
+    height:210px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:1.75rem;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.project-banner::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    top:-120px;
+
+    right:-90px;
+
+}
+
+.project-banner::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.05);
+
+    bottom:-90px;
+
+    left:-60px;
+
+}
+
+.project-icon{
+
+    font-size:4rem;
+
+    color:#fff;
+
+    z-index:1;
+
+    transition:.35s ease;
+
+}
+
+.project-card:hover .project-icon{
+
+    transform:scale(1.15) rotate(-6deg);
+
+}
+
+.project-card h3{
+
+    margin-bottom:.8rem;
+
+    color:var(--text-primary);
+
+}
+
+.project-card p{
+
+    flex:1;
+
+    line-height:1.8;
+
+    color:var(--text-secondary);
+
+}
+
+.tech-stack{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:.65rem;
+
+    margin:1.75rem 0;
+
+}
+
+.tech-stack span{
+
+    padding:.45rem .9rem;
+
+    border-radius:999px;
+
+    background:var(--bg-secondary);
+
+    border:1px solid var(--border);
+
+    color:var(--primary);
+
+    font-size:.82rem;
+
+    font-weight:500;
+
+    transition:.3s ease;
+
+}
+
+.tech-stack span:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    transform:translateY(-2px);
+
+}
+
+.project-buttons{
+
+    display:flex;
+
+    gap:1rem;
+
+    margin-top:auto;
+
+}
+
+.project-buttons .btn{
+
+    flex:1;
+
+}
+
+.outline-btn{
+
+    background:transparent;
+
+    color:var(--primary);
+
+    border:2px solid var(--primary);
+
+}
+
+.outline-btn:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.project-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+.project-buttons{
+
+    margin-top:auto;
+
+}

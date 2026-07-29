@@ -1,0 +1,95 @@
+.base-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:var(--bg-card);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:2rem;
+
+    box-shadow:var(--shadow-md);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+
+    isolation:isolate;
+
+}
+
+.base-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,.08),
+        transparent 55%
+    );
+
+    opacity:0;
+
+    transition:opacity .35s ease;
+
+    pointer-events:none;
+
+}
+
+.base-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-1px;
+
+    border-radius:inherit;
+
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,.08),
+        transparent,
+        rgba(59,130,246,.12)
+    );
+
+    opacity:0;
+
+    z-index:-1;
+
+    transition:opacity .35s ease;
+
+}
+
+.base-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--primary);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.15),
+        0 0 30px rgba(59,130,246,.15);
+
+}
+
+.base-card:hover::before{
+
+    opacity:1;
+
+}
+
+.base-card:hover::after{
+
+    opacity:1;
+
+}

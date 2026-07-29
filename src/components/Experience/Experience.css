@@ -1,0 +1,49 @@
+.experience-card{
+
+    text-align:center;
+
+}
+
+.experience-icon{
+
+    width:70px;
+
+    height:70px;
+
+    margin:0 auto 1.5rem;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:rgba(37,99,235,.12);
+
+    color:var(--primary);
+
+    font-size:2rem;
+
+}
+
+.experience-card h4{
+
+    color:var(--primary);
+
+    margin:.5rem 0;
+
+}
+
+.experience-card span{
+
+    display:block;
+
+    margin-bottom:1rem;
+
+    color:var(--text-muted);
+
+    font-size:.9rem;
+
+}
