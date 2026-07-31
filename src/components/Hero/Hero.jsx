@@ -27,22 +27,22 @@ const Hero = () => {
                 >
 
                     <div className="hero-badge">
-                        Available for opportunities
+                        🚀 Open to Software Engineering Opportunities
                     </div>
 
                     <h1 className="hero-title">
-                        Building software
-                        <br />
-                        that solves
-                        <br />
-                        <span>real-world problems.</span>
+                        Vishal S
                     </h1>
 
+                    <h2 className="hero-subtitle">
+                        Building scalable software, one project at a time.
+                    </h2>
+
                     <p className="hero-description">
-                        I'm <strong>Vishal</strong>, a Computer Science student
-                        passionate about building scalable backend systems and
-                        modern web applications using Java, Spring Boot,
-                        React, and MySQL.
+                        Computer Science student focused on backend engineering, full-stack
+                        development, and AI-powered applications. I enjoy transforming ideas into
+                        performant, production-ready software using Java, Spring Boot, React,
+                        Firebase, and modern cloud technologies.
                     </p>
 
                     <div className="hero-buttons">
