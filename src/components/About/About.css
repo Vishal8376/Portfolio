@@ -1,131 +1,165 @@
 /* ===========================
    ABOUT SECTION
 =========================== */
+
 .about {
     padding: 100px 0;
 }
 
+/* ===========================
+   GRID
+=========================== */
+
 .about-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 2.5rem;
-    align-items: stretch;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+    align-items: start;
+}
+
+.about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
 }
 
 /* ===========================
-   ABOUT TEXT CARD
+   LEFT CARDS
 =========================== */
 
-.about-text {
-    padding: 2.5rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.about-card {
+    padding: 2rem;
 }
 
-.about-text h3 {
-    font-size: 1.75rem;
+.about-card h3 {
+    font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
     color: var(--text-primary);
-    letter-spacing: -0.02em;
 }
 
-.about-text p {
-    font-size: 1.05rem;
-    line-height: 1.8;
+.about-card p {
     color: var(--text-secondary);
-    margin-bottom: 2rem;
+    line-height: 1.8;
 }
 
-.about-text ul {
+/* ===========================
+   FOCUS LIST
+=========================== */
+
+.focus-list {
+    margin-top: 1rem;
+    list-style: none;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-}
-
-.about-text li {
-    display: flex;
-    align-items: center;
     gap: 1rem;
-    font-weight: 600;
-    font-size: 1.02rem;
-    color: var(--text-primary);
 }
 
-.about-text li svg {
-    font-size: 1.35rem;
+.focus-list li {
+    position: relative;
+    padding-left: 1.7rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.focus-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
     color: var(--primary);
-    padding: 8px;
-    box-sizing: content-box;
-    border-radius: 12px;
-    background: rgba(56, 189, 248, 0.12);
-    border: 1px solid rgba(56, 189, 248, 0.2);
+    font-weight: bold;
 }
 
 /* ===========================
    INFO CARDS
 =========================== */
 
-.about-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 1.75rem;
-    justify-content: center;
-}
-
 .info-card {
-    padding: 2.25rem 2rem;
+    min-height: 190px;
+    padding: 2rem;
     text-align: center;
+
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    transition: transform var(--spring-transition), box-shadow 0.35s ease, border-color 0.35s ease;
+    align-items: center;
+
+    transition:
+        transform var(--spring-transition),
+        border-color .3s ease,
+        box-shadow .3s ease;
 }
 
 .info-card svg {
-    font-size: 2.25rem;
+    font-size: 2rem;
     color: var(--primary);
-    margin-bottom: 1.25rem;
+
+    margin-bottom: 1rem;
+
     padding: 14px;
-    box-sizing: content-box;
-    border-radius: 20px;
-    background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(129, 140, 248, 0.08));
-    border: 1px solid rgba(56, 189, 248, 0.2);
-    transition: transform var(--spring-transition);
+
+    border-radius: 16px;
+
+    background: rgba(56,189,248,.12);
+
+    border: 1px solid rgba(56,189,248,.15);
+
+    transition: transform .3s ease;
 }
 
 .info-card:hover svg {
-    transform: scale(1.1) rotate(-6deg);
+    transform: scale(1.08) rotate(-5deg);
 }
 
 .info-card h4 {
-    font-size: 1.25rem;
+    margin-bottom: .75rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 0.6rem;
-    letter-spacing: -0.01em;
 }
 
 .info-card p {
-    font-size: 0.98rem;
     color: var(--text-secondary);
     line-height: 1.6;
+    font-size: .95rem;
 }
 
 /* ===========================
    RESPONSIVE
 =========================== */
 
-@media (max-width: 992px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+@media (max-width:992px){
+
+    .about-grid{
+        grid-template-columns:1fr;
     }
 
-    .about-text {
-        padding: 2rem;
+    .about-right{
+        grid-template-columns:repeat(2,1fr);
     }
+
+}
+
+@media (max-width:600px){
+
+    .about{
+        padding:80px 0;
+    }
+
+    .about-right{
+        grid-template-columns:1fr;
+    }
+
+    .about-card,
+    .info-card{
+        padding:1.75rem;
+    }
+
 }

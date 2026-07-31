@@ -1,140 +1,140 @@
 import "./About.css";
 import Reveal from "../Animation/Reveal";
-
 import {
-    FaGraduationCap,
-    FaBriefcase,
-    FaCode,
-    FaLaptopCode,
-    FaAward,
-    FaRocket,
+  FaAward,
+  FaBriefcase,
+  FaGraduationCap,
+  FaRocket,
 } from "react-icons/fa";
 
 function About() {
-    return (
-        <section id="about" className="about">
-            <div className="container">
+  return (
+    <section id="about" className="about">
+      <div className="container">
 
-                <Reveal>
-                    <h2 className="section-title">
-                        Building Software
-                    </h2>
+        <Reveal>
+          <h2 className="section-title">Engineering</h2>
 
-                    <p className="section-subtitle">
-                        I enjoy designing scalable backend systems, building modern
-                        web applications, and solving real-world problems through
-                        clean architecture and intuitive user experiences.
-                    </p>
-                </Reveal>
+          <p className="section-subtitle">
+            Passionate about building scalable backend systems, modern web
+            applications, and AI-powered solutions with clean architecture and
+            performance in mind.
+          </p>
+        </Reveal>
 
-                <div className="about-grid">
+        <div className="about-grid">
 
-                    {/* Main Card */}
+          {/* Left */}
 
-                    <Reveal>
-                        <div className="about-text card">
+          <div className="about-left">
 
-                            <h3>Hi, I'm Vishal 👋</h3>
+            <Reveal>
+              <div className="card about-card">
 
-                            <p>
-                                I'm a Computer Science Engineering student with a
-                                passion for backend engineering and full-stack
-                                development. I enjoy transforming ideas into
-                                reliable software using Java, Spring Boot, React,
-                                MySQL, and modern development tools.
-                            </p>
+                <h3>What I Build</h3>
 
-                            <ul>
+                <p>
+                  I build scalable backend systems, full-stack web applications,
+                  and AI-powered software focused on performance, maintainability,
+                  and real-world impact.
+                </p>
 
-                                <li>
-                                    <FaCode />
-                                    Backend Development with Java & Spring Boot
-                                </li>
+              </div>
+            </Reveal>
 
-                                <li>
-                                    <FaLaptopCode />
-                                    Modern Frontend Development with React
-                                </li>
+            <Reveal delay={0.1}>
+              <div className="card about-card">
 
-                                <li>
-                                    <FaRocket />
-                                    Building AI-Powered Full-Stack Applications
-                                </li>
+                <h3>What I Focus On</h3>
 
-                            </ul>
+                <ul className="focus-list">
+                  <li>Backend Engineering with Java & Spring Boot</li>
+                  <li>Modern Web Applications using React</li>
+                  <li>REST APIs & Database Design</li>
+                  <li>AI-powered Full Stack Applications</li>
+                  <li>Clean Architecture & Scalable Systems</li>
+                </ul>
 
-                        </div>
-                    </Reveal>
+              </div>
+            </Reveal>
 
-                    {/* Right Cards */}
+          </div>
 
-                    <Reveal delay={0.2}>
-                        <div className="about-cards">
+          {/* Right */}
 
-                            <div className="info-card card">
+          <div className="about-right">
 
-                                <FaAward />
+            <Reveal delay={0.15}>
+              <div className="info-card card">
 
-                                <h4>Oracle Certified</h4>
+                <FaAward />
 
-                                <p>
-                                    Java SE 21
-                                    <br />
-                                    Professional Developer
-                                </p>
+                <h4>Certification</h4>
 
-                            </div>
+                <p>
+                  Oracle Certified
+                  <br />
+                  Java SE 21 Professional
+                </p>
 
-                            <div className="info-card card">
+              </div>
+            </Reveal>
 
-                                <FaGraduationCap />
+            <Reveal delay={0.2}>
+              <div className="info-card card">
 
-                                <h4>Education</h4>
+                <FaGraduationCap />
 
-                                <p>
-                                    B.E Computer Science Engineering
-                                    <br />
-                                    Saveetha Engineering College
-                                </p>
+                <h4>Education</h4>
 
-                            </div>
+                <p>
+                  B.E Computer Science Engineering
+                  <br />
+                  Saveetha Engineering College
+                </p>
 
-                            <div className="info-card card">
+              </div>
+            </Reveal>
 
-                                <FaBriefcase />
+            <Reveal delay={0.25}>
+              <div className="info-card card">
 
-                                <h4>Experience</h4>
+                <FaBriefcase />
 
-                                <p>
-                                    Web Development Intern
-                                    <br />
-                                    Velandev Solutions
-                                </p>
+                <h4>Experience</h4>
 
-                            </div>
+                <p>
+                  Web Development Intern
+                  <br />
+                  Velandev Solutions
+                </p>
 
-                            <div className="info-card card">
+              </div>
+            </Reveal>
 
-                                <FaRocket />
+            <Reveal delay={0.3}>
+              <div className="info-card card">
 
-                                <h4>Focus Areas</h4>
+                <FaRocket />
 
-                                <p>
-                                    Backend Engineering
-                                    <br />
-                                    AI • Full Stack • REST APIs
-                                </p>
+                <h4>Current Focus</h4>
 
-                            </div>
+                <p>
+                  Backend Engineering
+                  <br />
+                  AI • Full Stack • System Design
+                </p>
 
-                        </div>
-                    </Reveal>
+              </div>
+            </Reveal>
 
-                </div>
+          </div>
 
-            </div>
-        </section>
-    );
+        </div>
+
+      </div>
+    </section>
+  );
 }
 
 export default About;
