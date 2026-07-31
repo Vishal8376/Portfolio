@@ -1,28 +1,32 @@
-import "./ProjectCard.css";
+import "./FeaturedProjectCard.css";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
-import {
-    FaGithub,
-    FaExternalLinkAlt,
-} from "react-icons/fa";
-
-function ProjectCard({
+function FeaturedProjectCard({
     title,
+    subtitle,
     description,
     technologies,
+    image,
     github,
     demo,
     category,
     status,
-    image,
 }) {
     return (
-        <article className="project-card">
+        <article className="featured-project-card">
 
-            <div className="project-image">
-                <img src={image} alt={title} />
+            <div className="featured-project-image">
+
+                <img
+                    src={image}
+                    alt={title}
+                />
+
+                <div className="image-overlay"></div>
+
             </div>
 
-            <div className="project-content">
+            <div className="featured-project-content">
 
                 <div className="project-meta">
 
@@ -42,41 +46,43 @@ function ProjectCard({
 
                 <h3>{title}</h3>
 
+                <h4>{subtitle}</h4>
+
                 <p>{description}</p>
 
-                <div className="tech-stack">
+                <div className="featured-tech-stack">
+
                     {technologies.map((tech) => (
                         <span key={tech}>
                             {tech}
                         </span>
                     ))}
+
                 </div>
 
-                <div className="project-buttons">
+                <div className="featured-buttons">
 
                     {demo && (
                         <a
                             href={demo}
                             target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-primary"
+                            rel="noreferrer"
+                            className="featured-btn primary"
                         >
                             <FaExternalLinkAlt />
                             Live Demo
                         </a>
                     )}
 
-                    {github && (
-                        <a
-                            href={github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-secondary"
-                        >
-                            <FaGithub />
-                            GitHub
-                        </a>
-                    )}
+                    <a
+                        href={github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="featured-btn secondary"
+                    >
+                        <FaGithub />
+                        GitHub
+                    </a>
 
                 </div>
 
@@ -86,4 +92,4 @@ function ProjectCard({
     );
 }
 
-export default ProjectCard;
+export default FeaturedProjectCard;

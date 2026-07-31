@@ -73,7 +73,6 @@ function Navbar() {
             <div className="navbar-container">
 
                 {/* Logo */}
-
                 <Link
                     to="home"
                     smooth
@@ -85,7 +84,6 @@ function Navbar() {
                 >
                     {"<V/>"}
                 </Link>
-
                 {/* Navigation */}
 
                 <nav className={`nav ${menuOpen ? "active" : ""}`}>
