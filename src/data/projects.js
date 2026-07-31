@@ -26,7 +26,7 @@ const projects = [
             "JWT"
         ],
 
-        github: "https://github.com/yourusername/Interest-based-networking-platform",
+        github: "https://github.com/Vishal8376/Interest-based-networking-platform",
 
         demo: "",
 
@@ -53,7 +53,7 @@ const projects = [
             "JavaScript"
         ],
 
-        github: "https://github.com/yourusername/Restaurant-Management-System",
+        github: "https://github.com/Nidish05/KITCHARY",
 
         demo: "",
 
@@ -80,7 +80,7 @@ const projects = [
             "Firebase"
         ],
 
-        github: "https://github.com/yourusername/VoiceForAll",
+        github: "https://github.com/Vishal8376/VoiceForAll",
 
         demo: "",
 

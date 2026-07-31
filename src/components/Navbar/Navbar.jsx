@@ -1,6 +1,8 @@
 import "./Navbar.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import { motion } from "framer-motion";
+
 import {
     HiMoon,
     HiSun,
@@ -20,12 +22,32 @@ function Navbar() {
     useEffect(() => {
 
         const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
+            setScrolled(window.scrollY > 40);
         };
 
         window.addEventListener("scroll", handleScroll);
 
-        return () => window.removeEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+
+    }, []);
+
+    useEffect(() => {
+
+        const handleResize = () => {
+
+            if (window.innerWidth > 768) {
+                setMenuOpen(false);
+            }
+
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
 
     }, []);
 
@@ -35,16 +57,29 @@ function Navbar() {
 
     return (
 
-        <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
+        <motion.header
+            className={`navbar ${scrolled ? "scrolled" : ""}`}
+            initial={{ y: -80 }}
+            animate={{
+                y: 0,
+                scale: scrolled ? 0.97 : 1,
+            }}
+            transition={{
+                duration: 0.35,
+                ease: "easeOut",
+            }}
+        >
 
-            <div className="container navbar-container">
+            <div className="navbar-container">
 
                 {/* Logo */}
 
                 <Link
                     to="home"
                     smooth
+                    spy
                     duration={500}
+                    offset={-80}
                     className="logo"
                     onClick={closeMenu}
                 >
@@ -53,121 +88,52 @@ function Navbar() {
 
                 {/* Navigation */}
 
-                <nav className={menuOpen ? "nav active" : "nav"}>
+                <nav className={`nav ${menuOpen ? "active" : ""}`}>
 
                     <ul className="nav-links">
 
-                        <li>
-                            <Link
-                                to="home"
-                                smooth
-                                spy
-                                duration={500}
-                                offset={-80}
-                                activeClass="active"
-                                onClick={closeMenu}
-                            >
-                                Home
-                            </Link>
-                        </li>
+                        {[
+                            "home",
+                            "about",
+                            "skills",
+                            "experience",
+                            "projects",
+                            "certificates",
+                            "contact",
+                        ].map((item) => (
 
-                        <li>
-                            <Link
-                                to="about"
-                                smooth
-                                spy
-                                duration={500}
-                                offset={-80}
-                                activeClass="active"
-                                onClick={closeMenu}
-                            >
-                                About
-                            </Link>
-                        </li>
+                            <li key={item}>
 
-                        <li>
-                            <Link
-                                to="skills"
-                                smooth
-                                spy
-                                duration={500}
-                                offset={-80}
-                                activeClass="active"
-                                onClick={closeMenu}
-                            >
-                                Skills
-                            </Link>
-                        </li>
+                                <Link
+                                    to={item}
+                                    smooth
+                                    spy
+                                    duration={500}
+                                    offset={-80}
+                                    activeClass="active"
+                                    onClick={closeMenu}
+                                >
+                                    {item.charAt(0).toUpperCase() + item.slice(1)}
+                                </Link>
 
-                        <li>
-                            <Link
-                                to="experience"
-                                smooth
-                                spy
-                                duration={500}
-                                offset={-80}
-                                activeClass="active"
-                                onClick={closeMenu}
-                            >
-                                Experience
-                            </Link>
-                        </li>
+                            </li>
 
-                        <li>
-                            <Link
-                                to="projects"
-                                smooth
-                                spy
-                                duration={500}
-                                offset={-80}
-                                activeClass="active"
-                                onClick={closeMenu}
-                            >
-                                Projects
-                            </Link>
-                        </li>
-
-                        <li>
-                            <Link
-                                to="certificates"
-                                smooth
-                                spy
-                                duration={500}
-                                offset={-80}
-                                activeClass="active"
-                                onClick={closeMenu}
-                            >
-                                Certificates
-                            </Link>
-                        </li>
-
-                        <li>
-                            <Link
-                                to="contact"
-                                smooth
-                                spy
-                                duration={500}
-                                offset={-80}
-                                activeClass="active"
-                                onClick={closeMenu}
-                            >
-                                Contact
-                            </Link>
-                        </li>
+                        ))}
 
                     </ul>
 
                 </nav>
 
-                {/* Right Actions */}
+                {/* Right Side */}
 
                 <div className="nav-actions">
 
                     <Link
-                        to="contact"
+                        to="contact-form"
                         smooth
+                        spy
                         duration={500}
-                        offset={-80}
+                        offset={-100}
                         className="hire-btn"
                         onClick={closeMenu}
                     >
@@ -179,7 +145,9 @@ function Navbar() {
                         onClick={toggleTheme}
                         aria-label="Toggle Theme"
                     >
-                        {theme === "dark" ? <HiSun /> : <HiMoon />}
+                        {theme === "dark"
+                            ? <HiSun size={20} />
+                            : <HiMoon size={20} />}
                     </button>
 
                     <button
@@ -187,14 +155,16 @@ function Navbar() {
                         onClick={() => setMenuOpen(!menuOpen)}
                         aria-label="Toggle Menu"
                     >
-                        {menuOpen ? <HiXMark /> : <HiBars3 />}
+                        {menuOpen
+                            ? <HiXMark size={28} />
+                            : <HiBars3 size={28} />}
                     </button>
 
                 </div>
 
             </div>
 
-        </header>
+        </motion.header>
 
     );
 

@@ -71,11 +71,11 @@ const skills = [
         subtitle: "Collaboration"
     },
 
-    {
-        icon: FaDocker,
+    /*{
+      icon: FaDocker,
         title: "Docker",
         subtitle: "Containerization"
-    },
+    },*/
 
     {
         icon: SiPostman,

@@ -39,7 +39,7 @@ function Footer() {
                         <div className="footer-socials">
 
                             <a
-                                href="https://github.com/yourusername"
+                                href="https://github.com/Vishal8376"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="GitHub"
@@ -50,7 +50,7 @@ function Footer() {
                             </a>
 
                             <a
-                                href="https://linkedin.com/in/yourprofile"
+                                href="https://linkedin.com/in/vishal-s/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="LinkedIn"
@@ -61,7 +61,7 @@ function Footer() {
                             </a>
 
                             <a
-                                href="https://leetcode.com/yourusername"
+                                href="https://leetcode.com/Vishal_3012"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="LeetCode"
@@ -72,7 +72,7 @@ function Footer() {
                             </a>
 
                             <a
-                                href="mailto:yourmail@gmail.com"
+                                href="mailto:vishal.decruze@gmail.com"
                                 aria-label="Email"
                             >
 

@@ -1,95 +1,49 @@
-.base-card{
+.base-card {
+    position: relative;
+    overflow: hidden;
 
-    position:relative;
+    background: var(--bg-card);
 
-    overflow:hidden;
+    border: 1px solid var(--border);
 
-    background:var(--bg-card);
+    border-radius: 24px;
 
-    border:1px solid var(--border);
+    padding: 2rem;
 
-    border-radius:20px;
-
-    padding:2rem;
-
-    box-shadow:var(--shadow-md);
+    box-shadow: var(--shadow-card);
 
     transition:
-        transform .35s ease,
+        transform var(--spring-transition),
         box-shadow .35s ease,
         border-color .35s ease;
 
-    isolation:isolate;
-
+    isolation: isolate;
 }
 
-.base-card::before{
+.base-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
 
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:linear-gradient(
+    background: linear-gradient(
         135deg,
         rgba(255,255,255,.08),
-        transparent 55%
+        transparent 60%
     );
 
-    opacity:0;
+    opacity: 0;
 
-    transition:opacity .35s ease;
+    transition: opacity .35s ease;
 
-    pointer-events:none;
-
+    pointer-events: none;
 }
 
-.base-card::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:-1px;
-
-    border-radius:inherit;
-
-    background:linear-gradient(
-        135deg,
-        rgba(255,255,255,.08),
-        transparent,
-        rgba(59,130,246,.12)
-    );
-
-    opacity:0;
-
-    z-index:-1;
-
-    transition:opacity .35s ease;
-
+.base-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg);
 }
 
-.base-card:hover{
-
-    transform:translateY(-10px);
-
-    border-color:var(--primary);
-
-    box-shadow:
-        0 12px 30px rgba(0,0,0,.15),
-        0 0 30px rgba(59,130,246,.15);
-
-}
-
-.base-card:hover::before{
-
-    opacity:1;
-
-}
-
-.base-card:hover::after{
-
-    opacity:1;
-
+.base-card:hover::before {
+    opacity: 1;
 }

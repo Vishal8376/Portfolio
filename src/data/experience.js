@@ -46,16 +46,6 @@ const experience = [
         duration: "Participant",
         description:
             "Worked on innovative solutions while collaborating with a team in a national-level hackathon."
-    },
-
-    {
-        id: 5,
-        icon: FaShieldAlt,
-        title: "Shaastra CTF",
-        organization: "IIT Madras",
-        duration: "Top 50",
-        description:
-            "Participated in IIT Madras Shaastra Capture The Flag competition solving cybersecurity and reverse engineering challenges."
     }
 
 ];

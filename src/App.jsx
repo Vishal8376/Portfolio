@@ -9,10 +9,14 @@ import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Experience from "./components/Experience/Experience";
 import Background from "./components/Background/Background";
-  
+import ScrollProgress from "./components/ScrollProgress/ScrollProgress";
+import BackToTop from "./components/BackToTop/BackToTop";
+
 function App() {
   return (
     <>
+      <Background />
+      <ScrollProgress />
       <Navbar />
 
       <main>
@@ -26,6 +30,8 @@ function App() {
       </main>
 
       <Footer />
+
+      <BackToTop />
     </>
   );
 }

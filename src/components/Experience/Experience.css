@@ -1,49 +1,39 @@
-.experience-card{
-
-    text-align:center;
-
+/* ===========================
+   EXPERIENCE TIMELINE
+=========================== */
+.experience {
+    padding: 100px 0;
 }
 
-.experience-icon{
-
-    width:70px;
-
-    height:70px;
-
-    margin:0 auto 1.5rem;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    border-radius:50%;
-
-    background:rgba(37,99,235,.12);
-
-    color:var(--primary);
-
-    font-size:2rem;
-
+.experience-grid {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    max-width: 900px;
+    margin: 3.5rem auto 0;
+    padding-left: 2.5rem;
 }
 
-.experience-card h4{
-
-    color:var(--primary);
-
-    margin:.5rem 0;
-
+.experience-grid::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 12px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 70%, transparent 100%);
+    border-radius: 9999px;
+    opacity: 0.5;
 }
 
-.experience-card span{
+@media (max-width: 768px) {
+    .experience-grid {
+        padding-left: 1.75rem;
+        gap: 1.75rem;
+    }
 
-    display:block;
-
-    margin-bottom:1rem;
-
-    color:var(--text-muted);
-
-    font-size:.9rem;
-
+    .experience-grid::before {
+        left: 6px;
+    }
 }

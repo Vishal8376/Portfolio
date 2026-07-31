@@ -1,183 +1,130 @@
 import "./Hero.css";
-
 import { motion } from "framer-motion";
+import resume from "../../assets/resume.pdf";
+import profile from "../../assets/images/profile.png"; // Change to your image
 
 import {
     FaGithub,
     FaLinkedin,
     FaEnvelope,
-    FaDownload
+    FaDownload,
 } from "react-icons/fa";
 
-import profile from "../../assets/images/profile.png";
+import { SiLeetcode } from "react-icons/si";
 
-function Hero() {
-
+const Hero = () => {
     return (
+        <section id="home" className="hero">
+            <div className="hero-container">
 
-        <section
-            id="home"
-            className="hero"
-        >
+                {/* Left Content */}
 
-            <div className="container hero-container">
+                <motion.div
+                    className="hero-content"
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                >
 
-                {/* Left Side */}
+                    <div className="hero-badge">
+                        Available for opportunities
+                    </div>
 
-                <div className="hero-content">
-
-                    <motion.span
-                        className="hero-badge"
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        🚀 Available for Opportunities
-                    </motion.span>
-
-                    <motion.h1
-                        initial={{ opacity: 0, x: -30 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.7, delay: 0.2 }}
-                    >
-                        Hi, I'm
-                        <span> Vishal</span>
-                    </motion.h1>
-
-                    <motion.h2
-                        initial={{ opacity: 0, x: -30 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.7, delay: 0.35 }}
-                    >
-                        Software Engineer &
+                    <h1 className="hero-title">
+                        Building software
                         <br />
-                        Full Stack Developer
-                    </motion.h2>
+                        that solves
+                        <br />
+                        <span>real-world problems.</span>
+                    </h1>
 
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.7, delay: 0.55 }}
-                    >
-                        Passionate about building scalable web applications
-                        using Java, Spring Boot and React.
-                        I enjoy solving real-world problems through clean,
-                        efficient code and intuitive user experiences.
-                    </motion.p>
+                    <p className="hero-description">
+                        I'm <strong>Vishal</strong>, a Computer Science student
+                        passionate about building scalable backend systems and
+                        modern web applications using Java, Spring Boot,
+                        React, and MySQL.
+                    </p>
 
-                    <motion.div
-                        className="hero-buttons"
-                        initial={{ opacity: 0, y: 25 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, delay: 0.75 }}
-                    >
+                    <div className="hero-buttons">
 
                         <a
                             href="#projects"
-                            className="btn"
+                            className="primary-btn"
                         >
                             View Projects
                         </a>
 
                         <a
-                            href="/resume.pdf"
-                            className="btn outline-btn"
-                            download
+                            href={resume}
+                            download="Vishal_S_Resume.pdf"
+                            className="secondary-btn"
                         >
                             <FaDownload />
-                            Resume
+                            <span>  Download Resume</span>
                         </a>
 
-                    </motion.div>
+                    </div>
 
-                    <motion.div
-                        className="hero-socials"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.7, delay: 1 }}
-                    >
+                    <div className="hero-socials">
 
-                        <motion.a
-                            href="#"
-                            whileHover={{
-                                scale: 1.2,
-                                rotate: 10
-                            }}
+                        <a
+                            href="https://github.com/Vishal8376"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="GitHub"
                         >
-                            <FaGithub />
-                        </motion.a>
+                            <FaGithub size={22} />
+                        </a>
 
-                        <motion.a
-                            href="#"
-                            whileHover={{
-                                scale: 1.2,
-                                rotate: 10
-                            }}
+                        <a
+                            href="https://www.linkedin.com/in/vishals-/"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="LinkedIn"
                         >
-                            <FaLinkedin />
-                        </motion.a>
+                            <FaLinkedin size={22} />
+                        </a>
 
-                        <motion.a
-                            href="#"
-                            whileHover={{
-                                scale: 1.2,
-                                rotate: 10
-                            }}
+                        <a
+                            href="https://leetcode.com/u/Vishal_3012/"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="LeetCode"
                         >
-                            <FaEnvelope />
-                        </motion.a>
+                            <SiLeetcode size={22} />
+                        </a>
 
-                    </motion.div>
+                        <a
+                            href="mailto:vishal.decruze@gmail.com"
+                            aria-label="Email"
+                        >
+                            <FaEnvelope size={22} />
+                        </a>
 
-                </div>
-
-                {/* Right Side */}
-
-                <motion.div
-                    className="hero-image"
-                    initial={{
-                        opacity: 0,
-                        scale: 0.8,
-                        rotate: -10
-                    }}
-                    animate={{
-                        opacity: 1,
-                        scale: 1,
-                        rotate: 0
-                    }}
-                    transition={{
-                        duration: 1,
-                        delay: 0.4
-                    }}
-                >
-
-                    <motion.div
-                        className="image-ring"
-                        animate={{
-                            y: [0, -12, 0]
-                        }}
-                        transition={{
-                            duration: 4,
-                            repeat: Infinity,
-                            ease: "easeInOut"
-                        }}
-                    >
-
-                        <img
-                            src={profile}
-                            alt="Vishal"
-                        />
-
-                    </motion.div>
+                    </div>
 
                 </motion.div>
 
+                {/* Right Image */}
+
+                <motion.div
+                    className="hero-image"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                        duration: 0.8,
+                        delay: 0.2,
+                    }}
+                >
+                    <img
+                        src={profile}
+                        alt="Vishal"
+                    />
+                </motion.div>
+
             </div>
-
         </section>
-
     );
-
-}
+};
 
 export default Hero;
