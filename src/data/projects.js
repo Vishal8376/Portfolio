@@ -122,7 +122,7 @@ const projects = [
     {
         id: 5,
         featured: false,
-        status: "Completed",
+        status: "In Development",
         category: "E-Commerce",
 
         title: "Clothing Store",
