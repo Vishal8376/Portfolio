@@ -86,7 +86,7 @@ function Footer() {
 
                     <div className="footer-bottom">
 
-                        © {year} Vishal. All Rights Reserved.
+                        © {year} Vishal S. All Rights Reserved.
 
                     </div>
 
